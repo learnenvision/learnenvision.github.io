@@ -10,56 +10,109 @@
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
   font-size: 16px;
-  border: none;
-  cursor: pointer;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: lightseagreen;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: lightseagreen;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
+  float: none;
+  color:white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: #00bfa6;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: green;
 }
 </style>
 <body>
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-green w3-card">
+  <div class="w3-bar w3-card" style="background-color: #00bfa6;">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="behaviorism.html" class="w3-bar-item w3-button w3-padding-large">BEHAVIORISM</a>
-    <a href="cognivitism.html" class="w3-bar-item w3-button w3-padding-large">COGNIVITISM</a>
-    <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <!-- <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a> -->
+    <div class="dropdown">
+      <a href="index.html">
+      <button class="dropbtn">HOME</button></a>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">BEHAVIORISM 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="skinner.html">Skinner</a>
+        <a href="pavlov.html">Pavlov</a>
+        <a href="reinforcement.html">Reinforcement</a>
+      </div>
+    </div>
+    <!-- <a href="behaviorism.html" class="w3-bar-item w3-button w3-padding-large">BEHAVIORISM</a> -->
+    <div class="dropdown">
+      <button class="dropbtn">COGNIVITISM 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="skinner.html">Piaget’s Theory</a>
+        <a href="pavlov.html">Bloom’s Taxonomy</a>
+        <a href="reinforcement.html">Bruner’s Theory</a>
+        <a href="reinforcement.html">Vygotsky’s Sociocultural Theory</a>
+        <a href="reinforcement.html">Ausubel’s Cognitive Theory</a>
+      </div>
+    </div>
+    <!-- <a href="cognivitism.html" class="w3-bar-item w3-button w3-padding-large">COGNIVITISM</a> -->
+    <!-- <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a> -->
+    <div class="dropdown">
+      <a href="about.html">
+      <button class="dropbtn">ABOUT</button></a>
     </div>
   </div>
 </div>
